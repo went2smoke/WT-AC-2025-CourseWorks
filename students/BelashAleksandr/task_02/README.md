@@ -39,11 +39,15 @@
 
 ### Локальный запуск (для приёмки)
 
-1. Скопируйте переменные окружения и задайте собственные секреты:
+1. Скопируйте переменные окружения для бэкенда и фронтенда:
 
  ```bash
- cp .env.example .env
+ # Backend
+ cp apps/server/.env.example apps/server/.env
  # Обязательно замените JWT_ACCESS_SECRET и JWT_REFRESH_SECRET на уникальные значения
+ 
+ # Frontend
+ cp apps/web/.env.example apps/web/.env
  ```
 
 2. Поднимите PostgreSQL локально (порт 5432) и создайте базу `news_aggregator`.
